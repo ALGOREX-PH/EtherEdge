@@ -1,19 +1,18 @@
-import HeroSection from '@/components/hero-section';
-import VisionSection from '@/components/vision-section';
+import HeroSection from '@/components/sections/hero';
+import ManifestoSection from '@/components/sections/manifesto';
 import FeaturesSection from '@/components/features-section';
-import ManifestoSection from '@/components/manifesto-section';
-import RoadmapSection from '@/components/roadmap-section';
+import PersonaSelector from '@/components/sections/persona-selector';
 import GetStartedSection from '@/components/get-started-section';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <HeroSection />
-      <VisionSection />
-      <FeaturesSection />
-      <RoadmapSection />
       <ManifestoSection />
+      <FeaturesSection />
+      <PersonaSelector />
       <GetStartedSection />
-    </>
+    </div>
   );
 }
