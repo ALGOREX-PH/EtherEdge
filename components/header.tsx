@@ -23,13 +23,16 @@ const Header = () => {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-      scrolled ? 'glassmorphism py-3' : 'bg-transparent py-4'
+      scrolled ? 'glassmorphism py-3 border-b border-white/10' : 'bg-transparent py-4'
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Zap className="h-8 w-8 text-primary animate-pulse" />
+          <div className="relative">
+            <Zap className="h-8 w-8 text-primary animate-pulse" />
+            <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse" />
+          </div>
           <span className="text-2xl font-bold tracking-tight glow-blue">
-            Ether<span className="text-gradient">Edge</span>
+            Ether<span className="text-gradient glow">Edge</span>
           </span>
         </Link>
 
