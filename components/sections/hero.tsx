@@ -10,6 +10,23 @@ const HeroSection = () => {
   const [ethPrice, setEthPrice] = useState("2,845.32");
   const [marketMood, setMarketMood] = useState<'bullish' | 'bearish' | 'volatile'>('bullish');
 
+  // Simulate real-time price updates
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const change = (Math.random() - 0.5) * 10;
+      const newPrice = (parseFloat(ethPrice.replace(',', '')) + change).toFixed(2);
+      setEthPrice(newPrice.replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+      
+      // Randomly change market mood
+      if (Math.random() < 0.1) {
+        const moods: ('bullish' | 'bearish' | 'volatile')[] = ['bullish', 'bearish', 'volatile'];
+        setMarketMood(moods[Math.floor(Math.random() * moods.length)]);
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [ethPrice]);
+
   const moodColors = {
     bullish: 'bg-green-500/20 text-green-400',
     bearish: 'bg-red-500/20 text-red-400',
@@ -30,7 +47,7 @@ const HeroSection = () => {
       <div className="fixed top-20 left-0 right-0 bg-black/40 backdrop-blur-sm border-b border-white/10 z-30">
         <div className="container mx-auto px-4 py-2 flex items-center justify-between text-sm">
           <div className="flex items-center space-x-6">
-            <div className="flex items-center">
+            <div className="flex items-center transition-all duration-300">
               <span className="text-muted-foreground mr-2">ETH:</span>
               <span className="font-medium">${ethPrice}</span>
             </div>
@@ -38,7 +55,7 @@ const HeroSection = () => {
               <span className="text-muted-foreground mr-2">Mood:</span>
               <span className={cn(
                 "px-2 py-0.5 rounded-full font-medium",
-                moodColors[marketMood]
+                moodColors[marketMood], "transition-all duration-300"
               )}>
                 {moodText[marketMood]}
               </span>
@@ -46,6 +63,7 @@ const HeroSection = () => {
           </div>
           <button className="text-primary hover:text-primary/90 transition-colors">
             View Full Analysis
+            <ArrowRight className="inline-block ml-1 h-4 w-4" />
           </button>
         </div>
       </div>
