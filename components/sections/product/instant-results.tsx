@@ -28,8 +28,8 @@ const InstantResults = () => {
     {
       type: 'error',
       prediction: 'Predicted: $3,100',
-      actual: '
-Actual: $2,950',
+      actual: 'Actual: $2,950',
+      
       accuracy: '85.2%',
       confidence: 'Low'
     }
