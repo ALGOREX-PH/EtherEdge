@@ -121,18 +121,20 @@ const CommunityPickCard = ({ pick, index }: CommunityPickCardProps) => (
     {/* Background Gradient */}
     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     
-    {/* Hall of Fame Badge */}
-    <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-xs font-medium">
-      Hall of Fame
-    </div>
-    
     <div className="relative z-10">
+      {/* Hall of Fame Badge - moved inside relative container */}
+      <div className="flex justify-end mb-2">
+        <div className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-xs font-medium">
+          Hall of Fame
+        </div>
+      </div>
+      
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+      <div className="flex items-start justify-between mb-6">
+        <h3 className="text-xl font-semibold group-hover:text-primary transition-colors flex-1 pr-4">
           {pick.name}
         </h3>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 flex-shrink-0">
           <Star className="h-5 w-5 text-yellow-400 fill-current" />
           <span className="font-medium text-lg">{pick.rating}</span>
           <span className="text-sm text-muted-foreground">({pick.reviews})</span>
