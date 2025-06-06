@@ -12,21 +12,21 @@ const InstantResults = () => {
 
   const predictions = [
     {
-      type: 'success',
+      type: 'success' as const,
       prediction: 'Predicted: $2,845',
       actual: 'Actual: $2,892',
       accuracy: '98.3%',
       confidence: 'High'
     },
     {
-      type: 'warning',
+      type: 'warning' as const,
       prediction: 'Predicted: $2,750',
       actual: 'Actual: $2,820',
       accuracy: '92.5%',
       confidence: 'Medium'
     },
     {
-      type: 'error',
+      type: 'error' as const,
       prediction: 'Predicted: $3,100',
       actual: 'Actual: $2,950',
       
