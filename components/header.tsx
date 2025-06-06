@@ -40,6 +40,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <NavLink href="#vision">Vision</NavLink>
           <NavLink href="/product">Product</NavLink>
+          <NavLink href="/features">Features</NavLink>
           <NavLink href="#roadmap">Roadmap</NavLink>
           <NavLink href="#manifesto">Manifesto</NavLink>
           <Link 
@@ -66,6 +67,7 @@ const Header = () => {
           <nav className="container mx-auto px-4 flex flex-col space-y-4">
             <MobileNavLink href="#vision" onClick={toggleMenu}>Vision</MobileNavLink>
             <MobileNavLink href="/product" onClick={toggleMenu}>Product</MobileNavLink>
+            <MobileNavLink href="/features" onClick={toggleMenu}>Features</MobileNavLink>
             <MobileNavLink href="#roadmap" onClick={toggleMenu}>Roadmap</MobileNavLink>
             <MobileNavLink href="#manifesto" onClick={toggleMenu}>Manifesto</MobileNavLink>
             <Link 
