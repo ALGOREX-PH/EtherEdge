@@ -41,6 +41,7 @@ const Header = () => {
           <NavLink href="#vision">Vision</NavLink>
           <NavLink href="/product">Product</NavLink>
           <NavLink href="/features">Features</NavLink>
+          <NavLink href="/forecasts">Forecasts</NavLink>
           <NavLink href="#roadmap">Roadmap</NavLink>
           <NavLink href="#manifesto">Manifesto</NavLink>
           <Link 
@@ -68,6 +69,7 @@ const Header = () => {
             <MobileNavLink href="#vision" onClick={toggleMenu}>Vision</MobileNavLink>
             <MobileNavLink href="/product" onClick={toggleMenu}>Product</MobileNavLink>
             <MobileNavLink href="/features" onClick={toggleMenu}>Features</MobileNavLink>
+            <MobileNavLink href="/forecasts" onClick={toggleMenu}>Forecasts</MobileNavLink>
             <MobileNavLink href="#roadmap" onClick={toggleMenu}>Roadmap</MobileNavLink>
             <MobileNavLink href="#manifesto" onClick={toggleMenu}>Manifesto</MobileNavLink>
             <Link 
