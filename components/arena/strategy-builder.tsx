@@ -237,4 +237,4 @@ const FeatureHighlight = ({ icon, title, description, color }: FeatureHighlightP
   </div>
 );
 
-export default StrategyBuilder;
+export default StrategyBuilder; 
