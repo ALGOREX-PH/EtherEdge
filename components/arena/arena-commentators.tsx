@@ -192,4 +192,5 @@ const CommentatorCard = ({ commentator, index }: CommentatorCardProps) => (
   </motion.div>
 );
 
+
 export default ArenaCommentators;
