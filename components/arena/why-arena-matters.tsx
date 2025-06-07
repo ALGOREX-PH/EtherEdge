@@ -122,4 +122,5 @@ const PrincipleCard = ({ principle, index }: PrincipleCardProps) => (
   </motion.div>
 );
 
+
 export default WhyArenaMatters;
