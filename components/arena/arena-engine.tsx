@@ -354,4 +354,5 @@ const MetricCard = ({ label, value, color, isGood }: MetricCardProps) => (
   </div>
 );
 
+
 export default ArenaEngine;
