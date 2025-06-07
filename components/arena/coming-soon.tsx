@@ -186,4 +186,5 @@ const FooterSection = ({ title, links }: FooterSectionProps) => (
   </div>
 );
 
+
 export default ComingSoon;
