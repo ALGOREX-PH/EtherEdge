@@ -306,4 +306,5 @@ const CommunityFeatureCard = ({ icon, title, description, color }: CommunityFeat
   </motion.div>
 );
 
+
 export default CommunityShowdown;
