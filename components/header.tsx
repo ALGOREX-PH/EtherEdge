@@ -43,6 +43,7 @@ const Header = () => {
           <NavLink href="/features">Features</NavLink>
           <NavLink href="/forecasts">Forecasts</NavLink>
           <NavLink href="/arena">Arena</NavLink>
+          <NavLink href="/leaderboard">Leaderboard</NavLink>
           <NavLink href="#roadmap">Roadmap</NavLink>
           <NavLink href="#manifesto">Manifesto</NavLink>
           <Link 
@@ -72,6 +73,7 @@ const Header = () => {
             <MobileNavLink href="/features" onClick={toggleMenu}>Features</MobileNavLink>
             <MobileNavLink href="/forecasts" onClick={toggleMenu}>Forecasts</MobileNavLink>
             <MobileNavLink href="/arena" onClick={toggleMenu}>Arena</MobileNavLink>
+            <MobileNavLink href="/leaderboard" onClick={toggleMenu}>Leaderboard</MobileNavLink>
             <MobileNavLink href="#roadmap" onClick={toggleMenu}>Roadmap</MobileNavLink>
             <MobileNavLink href="#manifesto" onClick={toggleMenu}>Manifesto</MobileNavLink>
             <Link 
